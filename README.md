@@ -1,18 +1,25 @@
 # Classifying Crop Type using Satellite Imagery
 
+## Notebook Workflow
+1. 01-Pre-processing - read data in from PostGIS and join it with other relational tables in the dataset. This was also a first step to look at the data.
+2. 02-create-features - write functions to calculate each vegetation index based on spectral bands. For each veg index calculate the mean and standard deviation across time and save as a multiband raster. I used 6 different vegetation inices. 
+3. 03-modeling-binary - model and hyperparameter selection using grid search and cross validation using 4 different kinds of models: logistic regression, random forests, support vector classification, and k-nearest neighbors.
+4. I included a multi-class notebook to show that I tried!
+5. Visualization is not included because it was done in a variety of programs, mainly QGIS and Tableau.
+
 ## Overview
 One of the United Nations sustainable development goals is “zero hunger by 2030.” Hunger and malnutrition remain a significant barrier to development in Africa. Collecting accurate data is critical for monitoring agricultural growth and improving food security. I will be using data from a Zindi challenge, which is an African data science platform that focuses on using data science for social benefit. 
 
 This project is a stepping stone to more advanced predictions such as crop yield prediction and predicted food security under future climate change scenarios which I am interested in doing for my final project. 
 
-## Goals
-The objective of this project is to create a multi-class supervised classification model to label fields by crop type using Sentinel-2 satellite imagery. The fields in the training set are along the Orange River, a major agricultural region in South Africa that has been stricken by drought in recent years. The end result will be a map of classified crop types for the agricultural region along the Orange river. 
 
-## Concerns
-I’m not sure if this dataset is appropriate to use with postgres. Is it ok if I use a geographic version of postgres? (https://postgis.net/)
-I worried the scope is too ambitious for my first classification project. Not sure what my MVP would be. MVP is predicting farmland vs. non farmland
+## Goals
+The objective of this project is to create a classification model to identify vineyards using Sentinel-2 satellite imagery. The end result will be a map of classified fields (Vinyard or not) for the agricultural region along the Orange river.
+
 
 ## Data
+The fields in the training set are along the Orange River, a major agricultural region in South Africa that have been verified in person and with drones in 2017.
+
 There are 7 crop types present in the fields:
 
 1. Cotton
