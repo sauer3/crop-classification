@@ -1,5 +1,7 @@
 # Classifying Crop Type using Satellite Imagery
 
+This was part of a Zindi coding challenge and the source data can be found here: [source_data](https://zindi.africa/competitions/farm-pin-crop-detection-challenge/data)
+
 ## Notebook Workflow
 1. 01-Pre-processing - read data in from PostGIS and join it with other relational tables in the dataset. This was also a first step to look at the data.
 2. 02-create-features - write functions to calculate each vegetation index based on spectral bands. For each veg index calculate the mean and standard deviation across time and save as a multiband raster. I used 6 different vegetation inices. 
