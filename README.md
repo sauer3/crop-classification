@@ -1,6 +1,6 @@
 # Classifying Crop Type using Satellite Imagery
 
-This was part of a Zindi coding challenge and the source data can be found here: (https://zindi.africa/competitions/farm-pin-crop-detection-challenge/data)
+This was part of a Zindi coding challenge and the source data can be found here: https://zindi.africa/competitions/farm-pin-crop-detection-challenge/data
 
 ## Notebook Workflow
 1. 01-Pre-processing - read data in from PostGIS and join it with other relational tables in the dataset. This was also a first step to look at the data.
